@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VMAlt Design by Muhammad Nur Alif (aldeveloper12@gmail.com)</title>
+    
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- Owl Carousel 2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="shortcut icon" href="https://vmwarealternatives.com/wp-content/uploads/2023/07/vmalt-2-768x149.png" type="image/x-icon" width="100%">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <style>
+        *, *::after, *::before{
+            font-family: 'Poppins', sans-serif;
+        }
+        h1,h2,h3,h4,h5,h6,.fs-1,.fs-2,.fs-3,.fs-4,.fs-5{
+            color: #212121;
+        }
+        p{
+            color: #818181 !important;
+        }
+        .btn{
+            border-radius: 0px !important;
+            padding: 0.7em 1.4em;
+            font-weight: 600;
+        }
+        .btn.btn-primary{
+            background: #044c9c !important;
+            border-color: #044c9c !important;
+        }
+        .btn-link{
+            color: #044c9c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav .nav-item{
+            text-decoration: none;
+            color: #212121;
+            font-weight: 500;
+        }
+        .divider{
+            height:8px;
+            width: 5em;
+            background: #044c9c;
+            opacity: 1 !important;
+            border:0px solid transparent!important;
+            outline:none !important;
+        }
+
+        /* Effect Type Header */
+        #cursor {
+            display: inline-block;
+            opacity: 1;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Dots Custom */
+        .news-dots{
+            display: flex;
+            align-items:center;
+            gap: 0.5em;
+            margin: 1em 0px;
+        }
+        .news-dots .owl-dot{
+            outline: none;
+            border: none;
+            padding: 0px;
+            display: block;
+            background: #c9c9c9;
+            border-radius: 99px;
+            height: 10px;
+            width: 10px;
+        }
+        .news-dots .owl-dot.active{
+            background: #044c9c;
+            width: 40px;
+        }
+        .news-dots .owl-dot span{
+            
+        }
+
+        /* Mega Menu Styling */
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 999;
+        }
+
+        .mega-menu .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .mega-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mega-menu li {
+            margin-bottom: 10px;
+        }
+
+        .mega-menu li a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .mega-menu li a:hover {
+            text-decoration: underline;
+        }
+
+        .mega-menu h4 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 768px) {
+            .mega-menu {
+                position: static;
+                box-shadow: none;
+                padding: 10px;
+            }
+
+            .mega-menu .container {
+                flex-direction: column;
+            }
+
+            .mega-menu .col-md-4 {
+                margin-bottom: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="position-sticky top-0 bg-white" style="z-index: 10;">
+        <div class="p-4 py-3 shadow-sm">
+            <div class="row align-items-center justify-content-betweeen">
+                <div class="col-6">
+                    <a href="/" class="d-block">
+                        <img src="https://vmwarealternatives.com/wp-content/uploads/2023/07/vmalt-2-768x149.png" alt="Logo VMAlt" class="d-block" style="max-height: 2.4em; object-fit: contain;">
+                    </a>
+                </div>
+                <div class="col-6">
+                    <!-- MD up -->
+                    <div class="w-100 d-none d-md-block">
+                        <nav class="d-flex align-items-center gap-5 justify-content-end">
+                            <a href="" class="nav-item">News</a>
+                            <a href="" class="nav-item">Partner Ecosystem</a>
+                            <a href="#" class="nav-item solutions-dropdown-toggle d-flex align-items-center gap-3">
+                                Solutions
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
+                                    <path fill="currentColor" d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
+                                </svg>
+                            </a>
+                            <a href="" class="btn btn-primary">Contact</a>
+                        </nav>
+                        <!-- Mega Menu -->
+                        <div class="mega-menu" style="display: none;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h6>Cloud Solutions</h6>
+                                        <hr class="divider" style="width: 2em; height: 4px">
+                                        <ul>
+                                            <li><a href="#" class="text-secondary fw-base">Multi-Cloud</a></li>
+                                            <li><a href="#" class="text-secondary fw-base">Hybrid Cloud</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6>Security Solutions</h6>
+                                        <hr class="divider" style="width: 2em; height: 4px">
+                                        <ul>
+                                            <li><a href="#" class="text-secondary fw-base">Data Protection</a></li>
+                                            <li><a href="#" class="text-secondary fw-base">Network Security</a></li>
+                                            <li><a href="#" class="text-secondary fw-base">Compliance</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6>Performance</h6>
+                                        <hr class="divider" style="width: 2em; height: 4px">
+                                        <ul>
+                                            <li><a href="#" class="text-secondary fw-base">Optimized Workloads</a></li>
+                                            <li><a href="#" class="text-secondary fw-base">High Performance Systems</a></li>
+                                            <li><a href="#" class="text-secondary fw-base">Cost Savings</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex d-md-none align-items-center justify-content-end btn-mobile-open" style="cursor: pointer;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 16 16">
+                            <path fill="currentColor" d="M5 3.75A.75.75 0 0 1 5.75 3h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 5 3.75m-4 4A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75m8 4a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75" />
+                        </svg>
+                    </div>
+
+                    <!-- Menu Small Device -->
+                    <div class="menu-mobile w-100 d-md-none position-absolute top-0 end-0 bg-white p-5" style="border-bottom-left-radius: 5em; display: none;">
+                        <nav class="d-flex flex-column align-items-end gap-5 justify-content-end">
+                            <div class="d-flex align-items-center justify-content-center btn-mobile-close bg-light p-3 rounded-circle" style="cursor: pointer;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+                                    <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                                        <path d="M8 8L40 40" />
+                                        <path d="M8 40L40 8" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <a href="" class="nav-item">News</a>
+                            <a href="" class="nav-item">Partner Ecosystem</a>
+                            <a href="#" class="nav-item mobile-dropdown-toggle d-flex align-items-center gap-3">
+                                Solutions
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
+                                    <path fill="currentColor" d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
+                                </svg>
+                            </a>
+                            <div class="dropdown-menu-box" style="display:none">
+                                <div class="container bg-light p-4">
+                                    <div class="row">
+                                        <div class="col-md-4 rounded-4">
+                                            <h6>Cloud Solutions</h6>
+                                            <hr class="divider" style="width: 2em; height: 4px">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="text-secondary fw-base">Multi-Cloud</a></li>
+                                                <li><a href="#" class="text-secondary fw-base">Hybrid Cloud</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6>Security Solutions</h6>
+                                            <hr class="divider" style="width: 2em; height: 4px">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="text-secondary fw-base">Data Protection</a></li>
+                                                <li><a href="#" class="text-secondary fw-base">Network Security</a></li>
+                                                <li><a href="#" class="text-secondary fw-base">Compliance</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6>Performance</h6>
+                                            <hr class="divider" style="width: 2em; height: 4px">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="text-secondary fw-base">Optimized Workloads</a></li>
+                                                <li><a href="#" class="text-secondary fw-base">High Performance Systems</a></li>
+                                                <li><a href="#" class="text-secondary fw-base">Cost Savings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="" class="btn btn-primary">Contact</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+
+        <!-- Hero Banner -->
+        <section>
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h1 class="fw-semibold"><span id="hero-text"></span><span id="cursor">|</span></h1>
+                        <hr class="divider">
+                        <p>Seamless migration to alternative cloud architectures and VMware alternatives: on-prem, multi-cloud and hybrid-cloud solutions leveraging cloud-native services and well architected frameworks to optimize performance, security and cost savings.</p>
+                        <a href="" class="btn btn-primary">Start Here !</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/cloud-computing-illustration-download-in-svg-png-gif-file-formats--database-hosting-platform-big-data-processing-business-and-ecommerce-pack-illustrations-2488737.png?f=webp" alt="Cloud Image illustration" class="d-block w-100">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Solutions Page -->
+        <section class="bg-light">
+            <div class="container py-5">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center mb-4">
+                    <h2>Our Solutions</h2>
+                    <hr class="divider">
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="rounded-5 bg-white p-3 text-center">
+                            <img src="https://www.factioninc.com/wp-content/uploads/2021/12/Hybrid-Cloud.Blog_.Image-01.png" alt="Image Service" class="d-block mb-3 rounded-4 w-100" style="aspect-ratio: 16/9; object-fit: cover;;">
+                            <div class="px-3 pb-3">
+                                <h6 class="fw-semibold">Hybrid Cloud Architecture</h6>
+                                <p class="mb-0 pb-0">Hybrid cloud architecture leverages the scalability and cost-efficiency of public clouds while maintaining the data privacy, security, and control offered by private clouds.</p>
+                                <a href="" class="btn-link d-inline-flex align-items-center gap-3 mt-2">Learn More
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                        <g fill="none">
+                                            <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                            <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="rounded-5 bg-white p-3 text-center">
+                            <img src="https://docs.multy.dev/assets/images/multi-cloud-314609adeec670988dff0882a93fdcb0.png" alt="Image Service" class="d-block mb-3 rounded-4 w-100" style="aspect-ratio: 16/9; object-fit: cover;;">
+                            <div class="px-3 pb-3">
+                                <h6 class="fw-semibold">Multi Cloud Architecture</h6>
+                                <p class="mb-0 pb-0">Multi-cloud architecture leverages the distinct capabilities of multiple cloud service providers to enhance operational flexibility and prevent vendor lock-in.</p>
+                                <a href="" class="btn-link d-inline-flex align-items-center gap-3 mt-2">Learn More
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                        <g fill="none">
+                                            <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                            <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="rounded-5 bg-white p-3 text-center">
+                            <img src="https://abetterwebsite.com.au/wp-content/uploads/2018/06/Website-Repair.jpg" alt="Image Service" class="d-block mb-3 rounded-4 w-100" style="aspect-ratio: 16/9; object-fit: cover;;">
+                            <div class="px-3 pb-3">
+                                <h6 class="fw-semibold">Strategic Repatriation</h6>
+                                <p class="mb-0 pb-0">Migrate data and applications from the cloud to a local data center, to enhance performance, reduce costs, and increase control over data and critical applications.</p>
+                                <a href="" class="btn-link d-inline-flex align-items-center gap-3 mt-2">Learn More
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                        <g fill="none">
+                                            <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                            <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="rounded-5 bg-white p-3 text-center">
+                            <img src="https://www.provendata.com/wp-content/uploads/2020/05/How-Ransomware-Encryption-Happens-and-4-Methods-for-Recovery-1.jpg" alt="Image Service" class="d-block mb-3 rounded-4 w-100" style="aspect-ratio: 16/9; object-fit: cover;;">
+                            <div class="px-3 pb-3">
+                                <h6 class="fw-semibold">Ransom Recovery</h6>
+                                <p class="mb-0 pb-0">A new platform can help businesses to comply with industry regulations, such as those governing data privacy and security.</p>
+                                <a href="" class="btn-link d-inline-flex align-items-center gap-3 mt-2">Learn More
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                        <g fill="none">
+                                            <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                            <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="rounded-5 bg-white p-3 text-center">
+                            <img src="https://www.nokia.com/sites/default/files/2022-01/cybersecurity4_0.jpg?height=600&width=1920&resize=1" alt="Image Service" class="d-block mb-3 rounded-4 w-100" style="aspect-ratio: 16/9; object-fit: cover;;">
+                            <div class="px-3 pb-3">
+                                <h6 class="fw-semibold">Security & Compliance</h6>
+                                <p class="mb-0 pb-0">A new platform can help businesses to comply with industry regulations, such as those governing data privacy and security.</p>
+                                <a href="" class="btn-link d-inline-flex align-items-center gap-3 mt-2">Learn More
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                        <g fill="none">
+                                            <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                            <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="rounded-5 bg-white p-3 text-center">
+                            <img src="https://7wdata.be/wp-content/uploads/2022/09/Data-lake-application-scaled-1.png" alt="Image Service" class="d-block mb-3 rounded-4 w-100" style="aspect-ratio: 16/9; object-fit: cover;;">
+                            <div class="px-3 pb-3">
+                                <h6 class="fw-semibold">Data Sovereignty</h6>
+                                <p class="mb-0 pb-0">Comply with industry regulations, such as those governing data privacy and security, like GDPR and US Data Privacy Laws.</p>
+                                <a href="" class="btn-link d-inline-flex align-items-center gap-3 mt-2">Learn More
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                        <g fill="none">
+                                            <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                            <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex justify-content-center">
+                            <a href="" class="btn btn-outline-secondary">And More Solutions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section>
+            <div class="container py-5 mt-5">
+                <div class="row">
+                    <div class="col-md-4 position-relative">
+                        <div class="d-flex flex-column justify-content-between">
+                            <hr class="divider" style="width: 2em;">
+                            <h2 class="fw-semibold">Key Benefits of Our Solutions</h2>
+                            <p class="mt-auto mb-3 text-justify">Explore how our tailored cloud and hybrid solutions can enhance your business with improved cost efficiency, optimized performance, flexibility, and robust security.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="p-4 rounded-4 mb-4 bg-white border">
+                                    <div class="mb-3" style="color: #044c9c;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 14 14">
+                                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M7 13.5a6.5 6.5 0 1 0 0-13a6.5 6.5 0 0 0 0 13" />
+                                                <path d="M8.702 5.222a1.33 1.33 0 0 0-1.258-.889H6.412a1.19 1.19 0 0 0-.254 2.353l1.571.344a1.334 1.334 0 0 1-.285 2.637h-.888a1.33 1.33 0 0 1-1.258-.89M7 4.333V3m0 8V9.666" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <h6>Cost Savings</h6>
+                                    <p>Achieve cost savings by updating configuration or migrating to a new platform to reduce license fees or moving to a cost-effective cloud-based solution.</p>
+                                    <a href="" class="btn-link d-flex align-items-center gap-3">Learn More
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                                            <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4 rounded-4 mb-4 bg-white border">
+                                    <div class="mb-3" style="color: #044c9c;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 16 16">
+                                            <path fill="currentColor" d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641z" />
+                                        </svg>
+                                    </div>
+                                    <h6>Performance</h6>
+                                    <p>Leverage hybrid/multi cloud and on-premises architecture techniques that take advantage of cloud-native services and optimize workloads for performance.</p>
+                                    <a href="" class="btn-link d-flex align-items-center gap-3">Learn More
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                                            <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4 rounded-4 mb-4 bg-white border">
+                                    <div class="mb-3" style="color: #044c9c;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 15 15">
+                                            <path fill="currentColor" d="M11.555 2C9.41 2 6.534 3.471 4.602 6H3C1.843 6 1.18 6.864.723 7.777L.11 9H3l1.5 1.5L6 12v2.889l1.223-.612C8.136 13.821 9 13.157 9 12v-1.602c2.529-1.932 4-4.809 4-6.953V2zM9 5a1 1 0 1 1 0 2a1 1 0 0 1 0-2m-6.5 6l-.5.5c-.722.722-1 2.5-1 2.5s1.698-.198 2.5-1l.5-.5z" />
+                                        </svg>
+                                    </div>
+                                    <h6>Agility</h6>
+                                    <p>Take advantage of cloud architecture designed to avoid vendor lock-in for quick response to market changes, providing faster deployment of applications and services.</p>
+                                    <a href="" class="btn-link d-flex align-items-center gap-3">Learn More
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                                            <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4 rounded-4 mb-4 bg-white border">
+                                    <div class="mb-3" style="color: #044c9c;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+                                            <path fill="currentColor" d="M12 2C9.243 2 7 4.243 7 7v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7c0-2.757-2.243-5-5-5M9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9zm4 10.723V20h-2v-2.277a1.993 1.993 0 0 1 .567-3.677A2 2 0 0 1 14 16a1.99 1.99 0 0 1-1 1.723" />
+                                        </svg>
+                                    </div>
+                                    <h6>Security</h6>
+                                    <p>Enhanced security features, which can help businesses to protect their data and applications from cyberattacks.</p>
+                                    <a href="" class="btn-link d-flex align-items-center gap-3">Learn More
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                                            <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container py-5">
+                <div class="d-flex flex-column align-items-center">
+                    <h2>Partners and Technologies</h2>
+                    <hr class="divider">
+                </div>
+                <div class="d-flex justify-content-center align-items-center gap-3 mt-3 flex-wrap">
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/1024px-Microsoft_Azure_Logo.svg.png" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/640px-Amazon_Web_Services_Logo.svg.png" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://logodownload.org/wp-content/uploads/2021/06/google-cloud-logo-1.png" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://1000logos.net/wp-content/uploads/2024/08/Oracle-Cloud-Logo.png" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://user-images.githubusercontent.com/27962005/35868522-b81474fe-0b2a-11e8-8108-7efe8ead8107.png" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Red_Hat_Logo_2019.svg" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAmVPHXMkkbmVZM5OSC8oEz9gUiJEqTfhEA&s" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEUyrNd3XdnJHUtGCRCH33DoFrJcJE052ZRg&s" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/OpenShift-LogoType.svg/640px-OpenShift-LogoType.svg.png" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://abdulrahmann.com/wp-content/uploads/2024/06/proxmox-new.jpg" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgMPOujKccQ0j7St5nN0Sa5JBx_yzKYA_NYQ&s" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBugIhfQBNuO29jxG_bOLdzD_OvjJvgftTZg&s" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Vmware-by-broadcom.svg/2560px-Vmware-by-broadcom.svg.png" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                    <div class="p-2 rounded-3 p-3 px-4 border border-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Nutanix_Logo.svg/2560px-Nutanix_Logo.svg.png" alt="" class="d-block" style="width:6em; aspect-ratio: 3/1.5; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-8 mb-3">
+                        <div class="text-primary text-uppercase">NEXT STEP</div>
+                        <h2>Talk with specialists for an initial VMware Alternative Assessment</h2>
+                    </div>
+                    <div class="col-md-12">
+                        <form action="" class="p-4 rounded-4 border border-3">
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3">
+                                    <label for="" class="form-label">First Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="first-name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="" class="form-label">Last Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="last-name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="" class="form-label">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="" class="form-label">Company URL</label>
+                                    <input type="url" class="form-control" name="company_url" required>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="" class="form-label">Messages <span class="text-danger">*</span></label>
+                                    <div style="font-size:12px" class="text-secondary mb-2">Please provide your availability below and relevant details so the appropriate experts are present.</div>
+                                    <textarea name="message" id="" class="form-control" cols="30" rows="7"></textarea>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            I agree to receive 1-to-1 communication in response to my inquiry.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <p style="font-size:12px" class="text-secondary">By clicking Submit below, you consent to VM Alt storing and processing the personal information submitted above to provide the requested content</p>
+                                    <button class="btn btn-primary">Start Talk!</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light">
+            <div class="container py-5">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <div class="text-uppercase text-primary">OUR NEWS</div>
+                    <h2 style="max-width: 40em;">Latest VM News and Case Studies</h2>
+                    <hr class="divider mb-5 mt-2" style="max-width:2em">
+                </div>
+                <div class="owl-carousel owl-theme news-carousel">
+                    <div class="p-4 rounded-4 bg-white">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Red_Hat_Logo_2019.svg" alt="Image News" class="d-block mb-3 w-100 rounded-4 overflow-hidden bg-light" style="aspect-ratio: 16/9;object-fit: cover;">
+                        <div class="px-2">
+                            <div class="fs-6 fw-semibold mb-2">The Rise of Linux Rootkits on VMware ESXi VMs: Understanding the Threat and Past Cybersecurity Issues</div>
+                            <p >Rootkits on VMware ESXi VMs pose a critical threat to cybersecurity. Understanding their rise and past issues is crucial for safeguarding virtual environments.</p>
+                            <a href="" class="btn-link d-inline-flex align-items-center gap-3 mt-2">Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <g fill="none">
+                                        <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                        <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-4 bg-white">
+                        <img src="https://vmwarealternatives.com/wp-content/uploads/2023/12/empty-desks-768x768.png" alt="Image News" class="d-block mb-3 w-100 rounded-4 overflow-hidden bg-light" style="aspect-ratio: 16/9;object-fit: cover;">
+                        <div class="px-2">
+                            <div class="fs-6 fw-semibold mb-2">VMWare Workers Face Return-to-Office Mandate After $69 Billion Merger</div>
+                            <p >Many employees have grown accustomed to the convenience of working from home and have successfully adapted to this new way of operating.</p>
+                            <a href="" class="btn-link d-inline-flex align-items-center gap-3 mt-2">Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <g fill="none">
+                                        <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                        <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-4 bg-white">
+                        <img src="https://vmwarealternatives.com/wp-content/uploads/2023/10/broadcom-768x106.png" alt="Image News" class="d-block mb-3 w-100 rounded-4 overflow-hidden bg-light" style="aspect-ratio: 16/9;object-fit: cover;">
+                        <div class="px-2">
+                            <div class="fs-6 fw-semibold mb-2">Broadcom Ends VMware’s Channel Program, Introduces Invite-Only Replacement</div>
+                            <p >It is crucial for VMware and its partners to adapt quickly and seek alternative distribution channels to mitigate the impact of Broadcom’s decision.</p>
+                            <a href="" class="btn-link d-inline-flex align-items-center gap-3 mt-2">Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <g fill="none">
+                                        <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                        <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-4 bg-white">
+                        <img src="https://vmwarealternatives.com/wp-content/uploads/2023/11/citrix-768x239.png" alt="Image News" class="d-block mb-3 w-100 rounded-4 overflow-hidden bg-light" style="aspect-ratio: 16/9;object-fit: cover;">
+                        <div class="px-2">
+                            <div class="fs-6 fw-semibold mb-2">Citrix Bleed Bug: Mass Exploitation and 20,000 Devices Hacked</div>
+                            <p >The Citrix Bleed Bug and its mass exploitation have brought cybersecurity concerns back to the forefront. With 20,000 devices compromised worldwide, organizations and users must</p>
+                            <a href="" class="btn-link d-inline-flex align-items-center gap-3 mt-2">Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <g fill="none">
+                                        <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                        <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dots Custom -->
+                <div class="news-dots"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-5" style="background: #044c9c;">
+        <div class="container text-white py-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex flex-column align-items-center text-center mb-4">
+                        <img src="https://vmwarealternatives.com/wp-content/uploads/2023/07/VMAlternatives-1400x113.png" alt="" class="d-block w-100 mb-3 pb-3 border-bottom" style="max-height: 2.5em; object-fit: contain; filter:grayscale(100) brightness(100);">
+                        <div class="d-flex align-items-center gap-5">
+                            <a href="" class="text-uppercase text-decoration-none text-white">News</a>
+                            <a href="" class="text-uppercase text-decoration-none text-white">Team</a>
+                            <a href="" class="text-uppercase text-decoration-none text-white">Partner Ecosystem</a>
+                            <a href="" class="text-uppercase text-decoration-none text-white">Speak With Specialist</a>
+                        </div>
+                    </div>
+                    <div class="d-block p-4 px-5 rounded-pill mx-auto" style="background:#063469 !important; width: fit-content;color: #b3d7ffd2;">
+                        &copy; VM Alternatives | Design & Development By <a href="mailto::aldeveloper12@gmail.com" class="text-white ms-1">Muhammad Nur Alif</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel 2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
+
+    <!-- Internal JS -->
+    <script src="./src/js/carousel.js"></script>
+    <script src="./src/js/script.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const texts = [
+            "VMWare Alternative",
+            "Suffering from Vendor Lock-in?",
+            "Unexpectedly Expensive Saas Pricing?",
+            "Need a Neutral Party Licensing Review?",
+            "Considering Strategic Repatriation?"
+        ];
+
+        let index = 0;
+        let charIndex = 0;
+        let currentText = "";
+        let isDeleting = false;
+        const typingSpeed = 100;
+        const deleteSpeed = 50;
+        const pauseTime = 2000; // Time before moving to the next text
+
+        const heroText = document.getElementById("hero-text");
+
+        function type() {
+            heroText.textContent = currentText.slice(0, charIndex);
+
+            if (!isDeleting && charIndex < texts[index].length) {
+                charIndex++;
+                setTimeout(type, typingSpeed);
+            } else if (isDeleting && charIndex > 0) {
+                charIndex--;
+                setTimeout(type, deleteSpeed);
+            } else if (!isDeleting && charIndex === texts[index].length) {
+                isDeleting = true;
+                setTimeout(type, pauseTime);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % texts.length;
+                currentText = texts[index];
+                setTimeout(type, typingSpeed);
+            }
+        }
+
+        currentText = texts[index];
+        type();
+
+        // Carousel
+        $('.news-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav: false,
+            dots: true,
+            dotsContainer: '.news-dots',
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:2,
+                },
+                1000:{
+                    items:3,
+                }
+            }
+        })
+
+        // Mega Menu
+        $(document).ready(function() {
+            // Large Device
+            $('.solutions-dropdown-toggle').on('click', function(e) {
+                e.preventDefault();
+                $('.mega-menu').slideToggle(); // Show/hide the mega menu
+            });
+
+            // Close mega menu when clicking outside
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.solutions-dropdown-toggle, .mega-menu').length) {
+                    $('.mega-menu').slideUp();
+                }
+            });
+
+            // Small Device
+            $('.mobile-dropdown-toggle').on('click', function(e) {
+                e.preventDefault();
+                $('.dropdown-menu-box').slideToggle(); // Show/hide the mega menu
+            });
+
+            // Close mega menu when clicking outside
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.mobile-dropdown-toggle, .dropdown-menu-box').length) {
+                    $('.dropdown-menu-box').slideUp();
+                }
+            });
+
+            $('.btn-mobile-open').on('click', function(e) {
+                e.preventDefault();
+                $('.menu-mobile').slideDown(); // Show/hide the mega menu
+            });
+
+            $('.btn-mobile-close').on('click', function(e) {
+                e.preventDefault();
+                $('.menu-mobile').slideUp(); // Show/hide the mega menu
+            });
+        });
+    });
+    </script>
+</body>
+</html>
